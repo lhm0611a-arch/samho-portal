@@ -10,14 +10,19 @@ export default function App() {
       <BackgroundSlider />
       
       {/* Top Navigation Bar */}
-      <header className="relative z-20 w-full px-4 sm:px-6 lg:px-12 py-4 sm:py-6 flex flex-col md:flex-row justify-between items-center bg-black/10 backdrop-blur-md border-b border-white/5">
-        <div className="flex items-center gap-4 sm:gap-5 mb-4 sm:mb-6 md:mb-0">
+      <motion.header 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative z-20 w-full px-4 sm:px-6 lg:px-12 py-3 sm:py-4 flex flex-col md:flex-row justify-between items-center bg-black/10 backdrop-blur-md border-b border-white/5"
+      >
+        <div className="flex items-center gap-4 sm:gap-5 mb-4 sm:mb-0">
           <img 
             src="/ci.png" 
             alt="HD Hyundai Samho" 
-            className="h-5 sm:h-7 object-contain"
+            className="h-5 sm:h-6 object-contain"
           />
-          <div className="h-5 sm:h-6 w-px bg-white/20 hidden md:block"></div>
+          <div className="h-5 w-px bg-white/20 hidden md:block"></div>
           <span className="text-xs sm:text-sm font-medium tracking-widest text-slate-300 hidden md:block uppercase">
             Global HR Portal
           </span>
@@ -29,53 +34,84 @@ export default function App() {
             <span className="tracking-wide">Secure Network</span>
           </div>
         </div>
-      </header>
+      </motion.header>
 
       {/* Main Content Area */}
-      <main className="relative z-10 flex-grow flex flex-col items-center justify-center px-4 sm:px-6 py-10 sm:py-16 lg:py-24">
+      <main className="relative z-10 flex-grow flex flex-col items-center justify-center px-4 sm:px-6 py-6 sm:py-8 lg:py-6">
         <div className="max-w-[1400px] w-full">
           
           {/* Hero Section */}
-          <div className="mb-12 sm:mb-20 text-center md:text-left">
+          <div className="mb-8 sm:mb-10 text-center md:text-left">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ staggerChildren: 0.2 }}
               className="max-w-3xl mx-auto md:mx-0"
             >
-              <div className="flex items-center justify-center md:justify-start gap-2 text-[10px] sm:text-xs font-bold text-blue-400 bg-blue-500/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full uppercase tracking-widest mb-6 sm:mb-8 inline-flex border border-blue-500/20 backdrop-blur-sm">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="flex items-center justify-center md:justify-start gap-2 text-[10px] sm:text-xs font-bold text-blue-400 bg-blue-500/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full uppercase tracking-widest mb-4 sm:mb-6 inline-flex border border-blue-500/20 backdrop-blur-sm"
+              >
                 <Activity className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-pulse" />
                 System Gateway V3.0
-              </div>
-              <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-4 sm:mb-6 leading-[1.15] drop-shadow-lg break-keep">
+              </motion.div>
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-3 sm:mb-4 leading-[1.15] drop-shadow-lg break-keep"
+              >
                 Foreign Workforce<br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 drop-shadow-md">
                   Integration System
                 </span>
-              </h2>
-              <p className="text-slate-200 text-sm sm:text-lg md:text-2xl font-medium leading-relaxed max-w-3xl mx-auto md:mx-0 drop-shadow-md break-keep px-2 sm:px-0">
+              </motion.h2>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                className="text-slate-200 text-sm sm:text-base md:text-lg font-medium leading-relaxed max-w-3xl mx-auto md:mx-0 drop-shadow-md break-keep px-2 sm:px-0"
+              >
                 HD현대삼호의 글로벌 인재 채용부터 정착, 역량 평가까지 전 과정을 아우르는 차세대 디지털 행정 포털입니다.
-              </p>
+              </motion.p>
             </motion.div>
           </div>
 
           {/* System Grid Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+          <motion.div 
+            initial="hidden"
+            animate="show"
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.1, delayChildren: 0.3 }
+              }
+            }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5"
+          >
             {systems.map((sys, index) => (
               <SystemCard key={sys.id} sys={sys} index={index} />
             ))}
-          </div>
+          </motion.div>
 
         </div>
       </main>
       
       {/* Footer */}
-      <footer className="relative z-20 w-full py-6 sm:py-8 px-4 sm:px-6 lg:px-12 border-t border-white/5 bg-black/20 backdrop-blur-xl flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
+      <motion.footer 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+        className="relative z-20 w-full py-5 sm:py-6 px-4 sm:px-6 lg:px-12 border-t border-white/5 bg-black/20 backdrop-blur-xl flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6"
+      >
         <div className="flex items-center gap-3 sm:gap-4">
-           <img 
+          <img 
             src="/ci.png" 
             alt="HD Hyundai Samho" 
-            className="h-3 sm:h-4 object-contain opacity-40 hover:opacity-100 transition-opacity"
+            className="h-3 sm:h-4 object-contain opacity-60 hover:opacity-100 transition-opacity"
           />
           <div className="h-4 w-px bg-white/10 hidden md:block"></div>
           <p className="text-[10px] sm:text-[11px] text-slate-500 tracking-widest uppercase text-center md:text-left">
@@ -87,7 +123,7 @@ export default function App() {
           <span>&middot;</span>
           <span>KR-SOUTH-1</span>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 }
