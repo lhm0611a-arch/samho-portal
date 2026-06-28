@@ -5,7 +5,7 @@ import { createServer as createViteServer } from "vite";
 async function startServer() {
   const app = express();
   // Ensure we use the port provided by the environment (Render sets PORT), fallback to 3000
-  const PORT = process.env.PORT || 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
   // --- 
   // Future backend API routes can be added here
