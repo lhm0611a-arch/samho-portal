@@ -14,7 +14,7 @@ export default function App() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative z-20 w-full px-4 sm:px-6 lg:px-12 py-3 sm:py-4 flex flex-col md:flex-row justify-between items-center bg-black/10 backdrop-blur-md border-b border-white/5"
+        className="relative z-20 w-full px-4 sm:px-6 lg:px-12 py-3 sm:py-4 flex flex-col md:flex-row justify-between items-center bg-black/30 backdrop-blur-md border-b border-white/10"
       >
         <div className="flex items-center gap-4 sm:gap-5 mb-4 sm:mb-0">
           <img 
@@ -52,7 +52,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="flex items-center justify-center md:justify-start gap-2 text-[10px] sm:text-xs font-bold text-blue-400 bg-blue-500/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full uppercase tracking-widest mb-4 sm:mb-6 inline-flex border border-blue-500/20 backdrop-blur-sm"
+                className="flex items-center justify-center md:justify-start gap-2 text-[10px] sm:text-xs font-bold text-blue-400 bg-black/40 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full uppercase tracking-widest mb-4 sm:mb-6 inline-flex border border-blue-500/30 backdrop-blur-md"
               >
                 <Activity className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-pulse" />
                 System Gateway V3.0
@@ -61,10 +61,10 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-3 sm:mb-4 leading-[1.15] drop-shadow-lg break-keep"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-3 sm:mb-4 leading-[1.15] break-keep [text-shadow:_0_2px_15px_rgba(0,0,0,0.8),_0_4px_30px_rgba(0,0,0,0.5)]"
               >
                 Foreign Workforce<br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 drop-shadow-md">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 [text-shadow:_0_2px_10px_rgba(0,0,0,0.8)]">
                   Integration System
                 </span>
               </motion.h2>
@@ -72,7 +72,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                className="text-slate-200 text-sm sm:text-base md:text-lg font-medium leading-relaxed max-w-3xl mx-auto md:mx-0 drop-shadow-md break-keep px-2 sm:px-0"
+                className="text-slate-100 text-sm sm:text-base md:text-lg font-medium leading-relaxed max-w-3xl mx-auto md:mx-0 break-keep px-2 sm:px-0 [text-shadow:_0_1px_8px_rgba(0,0,0,0.8)]"
               >
                 HD현대삼호의 글로벌 인재 채용부터 정착, 역량 평가까지 전 과정을 아우르는 차세대 디지털 행정 포털입니다.
               </motion.p>
@@ -105,7 +105,7 @@ export default function App() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="relative z-20 w-full py-5 sm:py-6 px-4 sm:px-6 lg:px-12 border-t border-white/5 bg-black/20 backdrop-blur-xl flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6"
+        className="relative z-20 w-full py-5 sm:py-6 px-4 sm:px-6 lg:px-12 border-t border-white/10 bg-black/40 backdrop-blur-xl flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6"
       >
         <div className="flex items-center gap-3 sm:gap-4">
           <img 
