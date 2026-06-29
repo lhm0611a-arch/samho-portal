@@ -19,8 +19,8 @@ export const SystemCard: React.FC<{ sys: SystemItem, index: number }> = ({ sys, 
       rel="noopener noreferrer"
       className={`group relative flex flex-col justify-between h-full p-4 sm:p-5 rounded-[1.25rem] sm:rounded-[1.5rem] overflow-hidden backdrop-blur-xl border transition-colors duration-500
         ${isOnline 
-          ? 'bg-white/[0.03] border-white/10 hover:bg-white/[0.08] hover:border-white/20 hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer' 
-          : 'bg-white/5 border-white/5 opacity-60 cursor-not-allowed grayscale'}`}
+          ? 'bg-black/30 border-white/10 hover:bg-black/50 hover:border-white/20 hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer' 
+          : 'bg-black/20 border-white/5 opacity-60 cursor-not-allowed grayscale'}`}
     >
       {/* Subtle background glow effect on hover */}
       {isOnline && (
