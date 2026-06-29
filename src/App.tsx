@@ -61,10 +61,10 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-3 sm:mb-4 leading-[1.15] break-keep [text-shadow:_0_2px_15px_rgba(0,0,0,0.8),_0_4px_30px_rgba(0,0,0,0.5)]"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-3 sm:mb-4 leading-[1.15] drop-shadow-lg break-keep"
               >
                 Foreign Workforce<br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 [text-shadow:_0_2px_10px_rgba(0,0,0,0.8)]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-indigo-300 to-purple-300 drop-shadow-md">
                   Integration System
                 </span>
               </motion.h2>
@@ -72,7 +72,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                className="text-slate-100 text-sm sm:text-base md:text-lg font-medium leading-relaxed max-w-3xl mx-auto md:mx-0 break-keep px-2 sm:px-0 [text-shadow:_0_1px_8px_rgba(0,0,0,0.8)]"
+                className="text-slate-100 text-sm sm:text-base md:text-lg font-medium leading-relaxed max-w-3xl mx-auto md:mx-0 break-keep px-2 sm:px-0 drop-shadow-md"
               >
                 HD현대삼호의 글로벌 인재 채용부터 정착, 역량 평가까지 전 과정을 아우르는 차세대 디지털 행정 포털입니다.
               </motion.p>
